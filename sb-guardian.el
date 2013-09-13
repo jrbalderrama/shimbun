@@ -1,10 +1,9 @@
 (require 'shimbun)
 (require 'sb-rss)
-
+;; TODO add more categories & check some empty news
 (luna-define-class shimbun-guardian (shimbun-rss) ())
 (defvar shimbun-guardian-url "http://feeds.theguardian.com/theguardian")
-(defvar shimbun-guardian-from-address "web@guardian.com.bo")
-(defvar shimbun-guardian-expiration-days 7)
+(defvar shimbun-guardian-from-address "userhelp@theguardian.com")
 (defvar shimbun-guardian-content-start
   (regexp-opt '("<div id=\"live-blog-new-updates-wrapper\">" ;; blog content
 		"<div class=\"flexible-content-body\">";; twitter content
@@ -45,19 +44,3 @@
 		      shimbun-guardian-path-alist))))
 
 (provide 'sb-guardian)
-
-;;; sb-guardian.el ends here
-
-
-;;  (concat "id=\"" (or "article-body-blocks" "live-blog-blocks")  "\""))
-
-  ;; (concat "<div id=\""
-  ;; 	  (regexp-opt '("main-article-info" "E IIMA" "S IBOX" "S IMA" "S BO"))
-  ;; 	  "\">"))
-
-  ;;(defvar shimbun-guardian-content-start "<div id=\"\">")
-					; <div id="article-body-blocks">
-;; (defvar shimbun-guardian-content-end
-;;   (concat "id=\""
-;; 	  (regexp-opt '("blog-navigation" "trackable-component component-wrapper six-col" "b4 trackable-component left"))
-;; 	  "\""))

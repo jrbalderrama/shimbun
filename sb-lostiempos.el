@@ -3,10 +3,10 @@
 
 (luna-define-class shimbun-lostiempos (shimbun-rss) ())
 
+;; www.lostiempos.com/rss/
 (defvar shimbun-lostiempos-url "http://www.lostiempos.com/rss")
 (defvar shimbun-lostiempos-from-address "lostiempos@lostiempos-bolivia.com")
-(defvar shimbun-lostiempos-expiration-days 7)
-
+;; (defvar shimbun-lostiempos-expiration-days 7)
 (defvar shimbun-lostiempos-content-start "<!-- fin pub -->")
 (defvar shimbun-lostiempos-content-end "<!-- fin articulo_contenido -->")
 

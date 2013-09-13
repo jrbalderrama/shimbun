@@ -1,9 +1,12 @@
 (require 'shimbun)
 (require 'sb-rss)
+;; TODO support 'video' pages
+;; TODO add ecole, flottes d'entreprise, and enseignement superieur (immobilier?)
 
 (luna-define-class shimbun-lemonde (shimbun-rss) ())
-;; TODO support 'video' pages
-(defvar shimbun-lemonde-url "http://www.lemonde.fr/rss/")
+
+;; http://www.lemonde.fr/rss/
+(defvar shimbun-lemonde-url "http://www.lemonde.fr/rss")
 (defvar shimbun-lemonde-from-address "web@lemonde.fr")
 (defvar shimbun-lemonde-content-start
   (regexp-opt '("<div id=\"articleBody\" class=\"txt15_140\" itemprop=\"articleBody\">" ;; article
@@ -38,7 +41,9 @@
     ("academie" . "/tag/monde-academie.xml")
     ("finance" . "/tag/finance.xml")
     ("livres" . "/tag/livres.xml")
+    ("cinema" . "/tag/cinema.xml")
     ("media" . "/tag/actualite-medias.xml")
+    ("musiques" . "/tag/musiques.xml")
     ("mode" . "/tag/mode.xml")
     ("lemagazine" . "/tag/le-magazine.xml")
     ("afrique" . "/tag/afrique.xml")

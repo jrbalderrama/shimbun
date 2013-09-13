@@ -9,7 +9,7 @@
 
 ;; http://www.repubblica.it/static/servizi/rss/index.html
 (defvar shimbun-larepubblica-url "http://www.repubblica.it/rss")
-(defvar shimbun-larepubblica-from-address "web@larepubblica.fr")
+(defvar shimbun-larepubblica-from-address "pubblicawww@repubblica.it")
 (defvar shimbun-larepubblica-content-start
   (regexp-opt '("<h3 itemprop=\"description\">"
 		"<p class=\"summary\">"
